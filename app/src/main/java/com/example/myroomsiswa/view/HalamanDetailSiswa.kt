@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Edit
@@ -22,6 +23,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.rememberCoroutineScope
@@ -35,7 +37,10 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.myroomsiswa.R
 import com.example.myroomsiswa.room.Siswa
 import com.example.myroomsiswa.view.route.DestinasiDetailSiswa
+import com.example.myroomsiswa.viewmodel.DetailSiswaUiState
+import com.example.myroomsiswa.viewmodel.DetailViewModel
 import com.example.myroomsiswa.viewmodel.provider.PenyediaViewModel
+import com.example.myroomsiswa.viewmodel.toSiswa
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
